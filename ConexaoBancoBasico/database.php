@@ -1,5 +1,11 @@
 <?php
 
+    function DB_Create($tabela, $dados){    
+         
+        $query = "INSERT INTO clientes (nome, email, tel) VALUES ('".$dados['nome']."', '".$dados['email']."','".$dados['tel']."');";
+        DBExecute($query);
+    }
+
     // executa query
     function DBExecute($query){
         $link = DB_Connect();
