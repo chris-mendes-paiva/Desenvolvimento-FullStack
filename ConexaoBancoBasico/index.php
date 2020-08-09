@@ -27,13 +27,13 @@
       require 'config.php';
       require 'connection.php';     
       require 'database.php';
-      
+   
       if(empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['tel'])){
         echo 'Formulario falta dados';
       }else{
-          $query = "INSERT INTO clientes (nome, email, tel) VALUES ('".$_POST['nome']."', '".$_POST['email']."','".$_POST['tel']."');";
-          var_dump(DBExecute($query));
+          $gravar = DB_Create('clientes', $_POST);
       }
+      
       
       /* 
       // abrindo conexão
