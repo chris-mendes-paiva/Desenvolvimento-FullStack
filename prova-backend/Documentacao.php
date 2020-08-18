@@ -1,6 +1,6 @@
 <?php
 /*
-3 - 
+4 - 
     Criada a Controller instituicoes
         php artisan make:controller API/InstituicoesController    // Controller foi criada dentro da pasta API no intuito organizacional
     Criado o Index de instituicoes
@@ -27,8 +27,7 @@
             return response()->json($instituicoes);
         
         }
-
-4 -
+5 -
     Criada a Controller convenios
         php artisan make:controller API/ConveniosController    // Controller foi criada dentro da pasta API no intuito organizacional
     Criado o Index de Convenio
@@ -51,14 +50,12 @@
                 'valor' => 'Siape',
                 ),
             );
-
             return response()->json($convenios);
         
         }
-
-5 - 
-    Criada a migration taxas
-        php artisan make:migration create_taxas_table
+6 - 
+    Criada a Controller credito
+        php artisan make:Controller API/CreditoController   // Controller foi criada dentro da pasta API no intuito organizacional
     Criado o Index de credito
         public function index($instituicao, $valor)
     {
@@ -144,7 +141,6 @@
               'convenio' => 'INSS',
             ),
         );
-
         foreach($taxas as $tax){
             if(in_array($instituicao, $tax)){
                 $inti = $tax;
