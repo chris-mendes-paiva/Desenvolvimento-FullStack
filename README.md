@@ -1,2 +1,2 @@
 # Projetos-Variados
-Repositorio de projetos  aleatorios  desenvolvidos para compartilhamento de ideia.
+Repositorio de projetos utilizados como base de estudos, e afins de consultas.
